@@ -13,8 +13,6 @@ class CC3MDataset(BaseDataset):
         self.split = split
         self.metadata = None
         self._load_metadata()
-        # self.data_dir = "/cfs/cfs-4260a4096/445-mds11/CC3M"
-        # self.data_dir = "/cfs/cfs-4260a4096/260a4096/mds9/CC3M"
         if split == "train":
             names = ["cc3m_train"]
         elif split == "val":
