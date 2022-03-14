@@ -3,7 +3,7 @@
 Code for the paper: All in One: Exploring Unified Video-Language Pre-training [Arxiv]()
 ---
 
-![ppl](figures/main_ppl.png)
+![ppl](figures/ppl.jpg)
 
 ## Install
 
@@ -62,7 +62,12 @@ See [`EVAL.md`](EVAL.md)
 If you find our work helps, please cite our paper.
 
 ```bash
-
+@article{wang2022allinone,
+  title={All in One: Exploring Unified Video-Language Pre-training},
+  author={Wang, Alex Jinpeng and Ge, Yixiao and Yan, Rui and Ge Yuying and Lin, Xudong and Cai, Guanyu  and Wu, Jianping and Shan, Ying and Qie, Xiaohu and Shou, Mike Zheng},
+  journal={arXiv preprint arXiv:2203.xxxxx},
+  year={2022}
+}
 ```
 
 ## Acknowledgement
