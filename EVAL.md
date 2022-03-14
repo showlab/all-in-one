@@ -30,7 +30,7 @@ load_path="pretrained/all-in-one-base.ckpt"
 ### MSRVTT-QA
 
 ```bash
-python run.py with data_root=/group/20016/awinywang/DataSet num_gpus=8 \
+python run.py with data_root=DataSet num_gpus=8 \
 num_nodes=1 \
 num_frames=3 \
 per_gpu_batchsize=16 task_finetune_msrvttqa \
@@ -40,7 +40,7 @@ load_path="pretrained/all-in-one-base.ckpt"
 
 ### MSVD-QA
 ```bash
-python run.py with data_root=/group/20016/awinywang/DataSet num_gpus=8 \
+python run.py with data_root=DataSet num_gpus=8 \
 num_nodes=1 \
 num_frames=3 \
 per_gpu_batchsize=16 task_finetune_msvdqa \
@@ -69,7 +69,7 @@ load_path="pretrained/all-in-one-base.ckpt"
 ```bash
 python run.py \
 with data_root=DataSet num_gpus=8 num_nodes=1 \
-per_gpu_batchsize=4 task_finetune_action_recognition_hmdb51 \
+per_gpu_batchsize=8 task_finetune_action_recognition_hmdb51 \
 num_frames=3 linear_evaluation=True backend='a100' \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
@@ -87,7 +87,7 @@ load_path="pretrained/all-in-one-base.ckpt"
 ### LSMDC
 
 ```bash
-python run.py with data_root=/group/20016/awinywang/DataSet num_gpus=8 num_nodes=1 \
+python run.py with data_root=DataSet num_gpus=8 num_nodes=1 \
 per_gpu_batchsize=8 task_finetune_lsmdcchoice test_only=True \
 num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
@@ -103,7 +103,7 @@ load_path="pretrained/all-in-one-base.ckpt"
 ### MSRVTT
 
 ```bash
-python run.py with data_root=/group/20016/awinywang/DataSet num_gpus=8 num_nodes=1 \
+python run.py with data_root=DataSet num_gpus=8 num_nodes=1 \
 per_gpu_batchsize=8 task_finetune_msrvttchoice test_only=True \
 num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
@@ -121,8 +121,8 @@ load_path="pretrained/all-in-one-base.ckpt"
 #### VTC only
 ```bash
 python run.py with \
-data_root=/group/20016/awinywang/DataSet num_gpus=8 num_nodes=1 \
-per_gpu_batchsize=3 task_finetune_only_ind_itc_msrvtt_randaug \
+data_root=DataSet num_gpus=8 num_nodes=1 \
+per_gpu_batchsize=32 task_finetune_only_ind_itc_msrvtt_randaug \
 num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
@@ -131,8 +131,8 @@ load_path="pretrained/all-in-one-base.ckpt"
 
 ```bash
 python run.py with \
-data_root=/group/20016/awinywang/DataSet num_gpus=8 num_nodes=1 \
-per_gpu_batchsize=3 task_finetune_ind_itc_irtr_msrvtt_randaug \
+data_root=DataSet num_gpus=8 num_nodes=1 \
+per_gpu_batchsize=6 task_finetune_ind_itc_irtr_msrvtt_randaug \
 num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
 ```

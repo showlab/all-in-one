@@ -18,7 +18,7 @@ wget -c [anonymous](anonymous)
 ```bash
 python move_pretrained_weight.py
 
-python run.py with data_root=/DataSet \
+python run.py with data_root=DataSet \
 num_gpus=8 num_nodes=4 \
 num_frames=8 \
 task_mlm_itm_webvid whole_word_masking=True \
@@ -28,7 +28,7 @@ step200k per_gpu_batchsize=16
 ```bash
 python move_pretrained_weight.py
 
-python run.py with data_root=/DataSet \
+python run.py with data_root=DataSet \
 num_gpus=8 num_nodes=4 \
 num_frames=8 \
 task_mlm_itm_howto whole_word_masking=True \
