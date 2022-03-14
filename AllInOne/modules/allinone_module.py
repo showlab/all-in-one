@@ -159,12 +159,12 @@ class AllinoneTransformerSS(pl.LightningModule):
             self.itm_score = heads.ITMHead(config["hidden_size"])
             self.itm_score.apply(objectives.init_weights)
 
-        # alex:  vcr q2a task
+        # :  vcr q2a task
         if config["loss_names"]["vcr_q2a"] > 0:
             self.itm_score = heads.ITMHead(config["hidden_size"])
             self.itm_score.apply(objectives.init_weights)
 
-        # alex:  tvqa
+        # :  tvqa
         if config["loss_names"]["mc_vqa"] > 0:
             self.itm_score = heads.ITMHead(config["hidden_size"])
             self.itm_score.apply(objectives.init_weights)
@@ -179,7 +179,7 @@ class AllinoneTransformerSS(pl.LightningModule):
             )
             self.vqa_classifier.apply(objectives.init_weights)
 
-        # alex: add for vcr: q2a
+        # : add for vcr: q2a
         if self.hparams.config["loss_names"]["vcr_q2a"] > 0:
             # for q2a
             self.rank_output = nn.Linear(hs, 1)
@@ -212,7 +212,7 @@ class AllinoneTransformerSS(pl.LightningModule):
             )
             self.mc_vqa_classifier.apply(objectives.init_weights)
 
-        # alex: add for openend_vqa
+        # : add for openend_vqa
         if self.hparams.config["loss_names"]["openend_vqa"] > 0:
             vs = self.hparams.config["msrvttqa_label_size"]
             # self.vqa_classifier = nn.Sequential(
@@ -252,7 +252,7 @@ class AllinoneTransformerSS(pl.LightningModule):
             self.rank_output.weight.data = self.itm_score.fc.weight.data[1:, :]
             self.rank_output.bias.data = self.itm_score.fc.bias.data[1:]
             self.margin = 0.2
-            # for p in self.itm_score.parameters(): # alex: requires_grad = true?
+            # for p in self.itm_score.parameters(): # : requires_grad = true?
             #     p.requires_grad = False
 
         # test msrvtt multiple choice without finetune
@@ -432,23 +432,23 @@ class AllinoneTransformerSS(pl.LightningModule):
         if "vqa" in self.current_tasks:
             ret.update(objectives.compute_vqa(self, batch))
 
-        # alex: msrvtt Visual Question Answering
+        # : msrvtt Visual Question Answering
         if "openend_vqa" in self.current_tasks:
             ret.update(objectives.compute_openend_vqa(self, batch))
 
-        # alex: vcop
+        #  vcop
         if "vcop" in self.current_tasks:
             ret.update(objectives.compute_vcop(self, batch))
 
-        # alex: vcr qa
+        # : vcr qa
         if "vcr_q2a" in self.current_tasks:
             ret.update(objectives.compute_vcr_q2a(self, batch))
 
-        # alex: mc_vqa
+        # : mc_vqa
         if "mc_vqa" in self.current_tasks:
             ret.update(objectives.compute_mc_vqa_q2a(self, batch))
 
-        # alex: msrvtt multiple choice setting
+        # : msrvtt multiple choice setting
         if "multiple_choice" in self.current_tasks:
             ret.update(objectives.compute_multiple_choice(self, batch))
 
@@ -488,7 +488,7 @@ class AllinoneTransformerSS(pl.LightningModule):
         output = self(batch)
         ret = dict()
 
-        # # alex: for debug
+        # #: for debug
         # total_loss = sum([v for k, v in output.items() if "loss" in k])
         # print(total_loss.item())
         if self.hparams.config["loss_names"]["vqa"] > 0:

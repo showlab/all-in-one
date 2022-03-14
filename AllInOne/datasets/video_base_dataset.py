@@ -218,7 +218,6 @@ class BaseDataset(torch.utils.data.Dataset):
                 for vi in range(view_size):
                     if orig_batch is None:
                         # new_images[vi][bi] = None
-                        # modify by alex
                         continue
                     else:
                         orig = img[bi][vi]

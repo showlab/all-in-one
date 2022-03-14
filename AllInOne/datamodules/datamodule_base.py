@@ -37,7 +37,6 @@ class BaseDataModule(LightningDataModule):
         self.draw_false_text = _config["draw_false_text"]
         self.image_only = _config["image_only"]
 
-        # add by alex:
         self.num_frames = _config["num_frames"]
         self.draw_options_text = _config["draw_options_text"]
         self.backend = _config["backend"]
