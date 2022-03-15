@@ -37,9 +37,9 @@ We provide three pretrained weights in google driver.
 
 |  Model   | Parameter | Pretrained Weight  | Trained Log | Hparams |
 |  ----  |  ---- | ----  | ---- | ---- |
-| All-in-one-Ti | 12M| [Google Driver](https://drive.google.com/file/d/1-mS9U1xRnvumaftjhxJsr_t4WjJ-gp7t/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1wG-iHe89TWrgG9autheAOfl59a8_Wn7C/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1anmiQVpjs1Mi6rdg-sLRtWzu31RU6rNw/view?usp=sharing)|
-| All-in-one-S |33M| [Google Driver](https://drive.google.com/file/d/1ntyEsFWLG8XQZ9oliYsrRZmhp_OMbQJ-/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1NAHFZSAhGWF_CY4MlE6mKoBIyb4gbOqp/view?usp=sharing) |  [Google Driver](https://drive.google.com/file/d/1Y6OAnBPuei6QcQSyIXuL08Zb7TWxR6ue/view?usp=sharing)|
-| All-in-one-B |110M| [Google Driver](https://drive.google.com/file/d/1z3g891ND6CGCUkVzCXr2647wVG-15uUS/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1gaBEo91jo4ushI63uHBltrbSXJRLPd_K/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/16J0zsJUt4yUfOc93k4xX8Z9FW-7M_Bdl/view?usp=sharing) |
+| All-in-one-Ti | 12M| [Google Driver](https://drive.google.com/file/d/1-mS9U1xRnvumaftjhxJsr_t4WjJ-gp7t/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1j27-i7WsNDtj9k0CSnDC9sThMMjMRF-U/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1DmZ5apWqIuUMRg7igdN2sHM2INrT_UZo/view?usp=sharing)|
+| All-in-one-S |33M| [Google Driver](https://drive.google.com/file/d/1ntyEsFWLG8XQZ9oliYsrRZmhp_OMbQJ-/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/10uJZUMH10D1QD_o2g0WmXfv47xTAV5hJ/view?usp=sharing) |  [Google Driver](https://drive.google.com/file/d/12levE9kXQbWykJHUKqXNQZz32vtOPRLt/view?usp=sharing)|
+| All-in-one-B |110M| [Google Driver](https://drive.google.com/file/d/1z3g891ND6CGCUkVzCXr2647wVG-15uUS/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1FBs6HOeXr3Bo_UZLDq13qscLTMqITGWC/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1D7OiF9HpIIsFk20LkCUWYThpXo_NPzT0/view?usp=sharing) |
 
 After downloaded these pretrained weights, move them into pretrained dir.
 ```bash
