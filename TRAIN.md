@@ -2,13 +2,12 @@
 
 ## Download ViT/DeiT Pretrained Model
 
-If the server cannot connect to https, please download pretrained weight as follows.
+If the server cannot connect to https, please download pretrained (DeiT/ViT) weight in advance as follows.
 ```bash
-mkdir pretrained
 cd pretrained
-wget -c [anonymous](anonymous)
-wget -c [anonymous](anonymous)
-wget -c [anonymous](anonymous)
+wget -c https://dl.fbaipublicfiles.com/deit/deit_tiny_patch16_224-a1311bcf.pth
+wget -c https://dl.fbaipublicfiles.com/deit/deit_small_patch16_224-cd65a155.pth
+wget -c https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_224-80ecf9dd.pth
 
 ```
 
@@ -46,7 +45,7 @@ num_frames=3 \
 task_mlm_itm_webvid_howto whole_word_masking=True step200k per_gpu_batchsize=16
 ```
 
-### Webvid+HowTo+YT-Temporal [All-in-one-tiny]
+### Webvid+HowTo [All-in-one-tiny]
 
 ```bash
 python move_pretrained_weight.py
@@ -58,7 +57,7 @@ vit="vit_deit_tiny_patch16_224" image_size=224 patch_size=16 \
 hidden_size=192 num_heads=3 num_layers=12
 ```
 
-### Webvid+HowTo+YT-Temporal [All-in-one-small]
+### Webvid+HowTo [All-in-one-small]
 
 ```bash
 python move_pretrained_weight.py

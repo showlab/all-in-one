@@ -1,6 +1,6 @@
 # Evaluation
 
-## VQA
+## 1. VQA
 
 ### Evaluate TGIF
 
@@ -14,6 +14,10 @@ per_gpu_batchsize=8 task_finetune_tgifqa \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
+|  Accuracy   | Report in Paper  | Trained Log |
+|  ----  | ----  | --- |
+| 64.3  | 64.0 | [anonymous](anonymous) |
+
 #### TGIF-QA Action/Transition
 
 Modify line 19 in [`tgifqa`](AllInOne/datasets/tgifqa.py) for transition/action.
@@ -26,6 +30,10 @@ per_gpu_batchsize=16 task_finetune_tgif_action_trans \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
+|  Accuracy   | Report in Paper  | Trained Log |
+|  ----  | ----  | --- |
+| 93.0  | 92.5 | [google driver](https://drive.google.com/file/d/1GQLvIKpEC_flfOFx9GA7c7Ks26cfcvcK/view?usp=sharing) |
+
 
 ### MSRVTT-QA
 
@@ -37,6 +45,9 @@ per_gpu_batchsize=16 task_finetune_msrvttqa \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
+|  Accuracy   | Report in Paper  | Trained Log |
+|  ----  | ----  | --- |
+| 42.9  | 42.5 | [anonymous](anonymous) |
 
 ### MSVD-QA
 ```bash
@@ -47,8 +58,12 @@ per_gpu_batchsize=16 task_finetune_msvdqa \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
+|  Accuracy   | Report in Paper  | Trained Log |
+|  ----  | ----  | --- |
+| 45.5  | 46.1 | [anonymous](anonymous) |
 
-## Action Recognition (Linear Evaluation)
+
+## 2. Action Recognition (Linear Evaluation)
 
 ### K400
 ```bash
@@ -59,11 +74,9 @@ num_frames=8 linear_evaluation=True \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
-[comment]: <> (|  Accuracy   | Report in Paper  | Trained Log |)
-
-[comment]: <> (|  ----  | ----  | --- |)
-
-[comment]: <> (| 52.3  | 50.8 | [anonymous]&#40;anonymous&#41; |)
+|Accuracy|Report in Paper| Trained Log |
+| ---- |---- | --- |
+| 52.3  | 50.8 | [anonymous](anonymous) |
 
 ### HMDB51
 ```bash
@@ -75,14 +88,12 @@ load_path="pretrained/all-in-one-base.ckpt"
 ```
 
 
-[comment]: <> (|  Accuracy   | Report in Paper  | Trained Log |)
-
-[comment]: <> (|  ----  | ----  | --- |)
-
-[comment]: <> (| 51.2 | 50.8 | [anonymous]&#40;anonymous&#41; |)
+|  Accuracy   | Report in Paper  | Trained Log |
+|  ----  | ----  | --- |
+| 51.2 | 50.8 | [anonymous](anonymous) |
 
 
-## Zero-shot Multiple-choice
+## 3. Zero-shot Multiple-choice
 
 ### LSMDC
 
@@ -93,11 +104,9 @@ num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
-[comment]: <> (|  Accuracy   | Report in Paper  | Trained Log |)
-
-[comment]: <> (|  ----  | ----  | --- |)
-
-[comment]: <> (| 56.5 | 56.3 | [anonymous]&#40;anonymous&#41; |)
+|  Accuracy   | Report in Paper  | Trained Log |
+|  ----  | ----  | --- |
+| 56.5 | 56.3 | [anonymous](anonymous) |
 
 
 ### MSRVTT
@@ -109,13 +118,11 @@ num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
-[comment]: <> (|  Accuracy   | Report in Paper  | Trained Log |)
+|  Accuracy   | Report in Paper  | Trained Log |
+|  ----  | ----  | --- |
+| 79.6 | 80.3 | [anonymous](anonymous) |
 
-[comment]: <> (|  ----  | ----  | --- |)
-
-[comment]: <> (| 79.6 | 80.3 | [anonymous]&#40;anonymous&#41; |)
-
-## Retrieval
+## 4. Retrieval
 
 ### MSRVTT
 #### VTC only
@@ -127,6 +134,10 @@ num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
+|  R1   | Report in Paper  | Trained Log |
+|  ----  | ----  | --- |
+| 35.4 | 35.7 | [anonymous](anonymous) |
+
 #### VTC + VTM
 
 ```bash
@@ -136,3 +147,7 @@ per_gpu_batchsize=6 task_finetune_ind_itc_irtr_msrvtt_randaug \
 num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
+
+|  R1   | Report in Paper  | Trained Log |
+|  ----  | ----  | --- |
+| 36.7 | 37.1 | [anonymous](anonymous) |
