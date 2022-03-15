@@ -1,6 +1,8 @@
 # Evaluation
 
-## 1. VQA
+We provide two types of logs: _tensor log_ or _txt file_.
+
+## 1. VQA (_Fine-tuning_)
 
 ### Evaluate TGIF
 
@@ -16,7 +18,19 @@ load_path="pretrained/all-in-one-base.ckpt"
 
 |  Accuracy   | Report in Paper  | Trained Log |
 |  ----  | ----  | --- |
-| 64.3  | 64.0 | [anonymous](anonymous) |
+| 65.0  | 64.0 | [Google Driver](https://drive.google.com/file/d/164UwQsl99zU1O81U014ihimLl5HNBSZT/view?usp=sharing) |
+
+For tensor log, simple using 
+```bash
+mkdir tensor_log
+cp [path_to_provided_logs] tensor_log/
+tensorboard --logdir tensor_log
+```
+As below:
+
+![](figures/tensorboard_ft_example.png)
+
+
 
 #### TGIF-QA Action/Transition
 
@@ -47,7 +61,7 @@ load_path="pretrained/all-in-one-base.ckpt"
 
 |  Accuracy   | Report in Paper  | Trained Log |
 |  ----  | ----  | --- |
-| 42.9  | 42.5 | [anonymous](anonymous) |
+| 42.9  | 42.5 | [google driver](finetune_msrvtt_qa_seed0_from_last2022_2_25) |
 
 ### MSVD-QA
 ```bash
@@ -60,10 +74,10 @@ load_path="pretrained/all-in-one-base.ckpt"
 
 |  Accuracy   | Report in Paper  | Trained Log |
 |  ----  | ----  | --- |
-| 46.1  | 46.5 | [anonymous](anonymous) |
+| 46.1  | 46.5 | [google driver](https://drive.google.com/file/d/1f-vSnS1I7vu6Z7eiimGGY8B1vRbnNn0W/view?usp=sharing) |
 
 
-## 2. Action Recognition (Linear Evaluation)
+## 2. Action Recognition (_Linear Evaluation_)
 
 ### K400
 ```bash
@@ -93,7 +107,9 @@ load_path="pretrained/all-in-one-base.ckpt"
 | 51.2 | 50.8 | [Google Driver](https://drive.google.com/file/d/1PSnc6CHZS16JWnpNRdRbfeuFEejEBRP6/view?usp=sharing) |
 
 
-## 3. Zero-shot Multiple-choice
+## 3. Multiple-choice (_Zero-shot_)
+
+Zero-shot task is directly test the pretrained models, we can get these performances in a few minutes.
 
 ### LSMDC
 
@@ -104,10 +120,13 @@ num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
-|  Accuracy   | Report in Paper  | Trained Log |
-|  ----  | ----  | --- |
-| 56.5 | 56.3 | [anonymous](anonymous) |
+|  Accuracy   | Report in Paper  | 
+|  ----  | ----  | 
+| 56.7 | 56.3 | 
 
+Example:
+
+![](figures/lsmdc_zsl_example.png)
 
 ### MSRVTT
 
@@ -118,9 +137,23 @@ num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
-|  Accuracy   | Report in Paper  | Trained Log |
-|  ----  | ----  | --- |
-| 79.6 | 80.3 | [anonymous](anonymous) |
+|  Accuracy   | Report in Paper  | 
+|  ----  | ----  | 
+| 78.1 | 77.5 |
+
+
+### Ego-4d
+```bash
+python run.py with data_root=DataSet num_gpus=8 num_nodes=1 \
+per_gpu_batchsize=8 task_finetune_ego4dchoice test_only=True \
+num_frames=3 \
+load_path="pretrained/all-in-one-base.ckpt"
+```
+
+|  Accuracy   | Report in Paper  | 
+|  ----  | ----  | 
+| 36.5 | 36.5 |
+
 
 ## 4. Retrieval
 
@@ -134,11 +167,13 @@ num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
-|  R1   | Report in Paper  | Trained Log |
+|  R1/R5/R10   | Report in Paper  | Trained Log |
 |  ----  | ----  | --- |
-| 35.4 | 35.7 | [anonymous](anonymous) |
+| 35.6/62.8/71.3 | 36.1/62.3/72.1 | [Google Driver](https://drive.google.com/file/d/16JCLNSLcBidI5cEBrXL1gT6eeFaTHeuJ/view?usp=sharing) |
 
 #### VTC + VTM
+Since VTM need to sample N false texts, please use GPU memory as much as possible for best result.
+The R@1 is not very stable, run multiple times for best solution.
 
 ```bash
 python run.py with \
@@ -148,6 +183,6 @@ num_frames=3 \
 load_path="pretrained/all-in-one-base.ckpt"
 ```
 
-|  R1   | Report in Paper  | Trained Log |
+|  R1/R5/R10   | Report in Paper  | Trained Log |
 |  ----  | ----  | --- |
-| 36.7 | 37.1 | [anonymous](anonymous) |
+| 35.4/67.0/77.6 | 37.1/66.7/75.9 | [Google Driver](https://drive.google.com/file/d/1zLqD6VHjw9Ht6K2Bz7941QMXPVUizwVJ/view?usp=sharing) |

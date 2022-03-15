@@ -2,7 +2,6 @@
 # = image
 from .vg_caption_dataset import VisualGenomeCaptionDataset
 from .coco_caption_karpathy_dataset import CocoCaptionKarpathyDataset
-from .conceptual_caption_dataset import ConceptualCaptionDataset
 from .sbu_caption_dataset import SBUCaptionDataset
 from .cc3m import CC3MDataset
 # = video

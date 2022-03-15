@@ -90,6 +90,7 @@ Please refer to [clipbert](https://github.com/jayleicn/ClipBERT/blob/main/script
 After downloading all these datasets, please prepare these datasets as follow:
 
 ### Add soft link
+Add soft link below the directory dataset
 ```bash
 mkdir dataset
 ln -s [path_to_original_dataset] dataset/[lowercase_short_name]
