@@ -21,19 +21,22 @@ All these datasets contain video mainly from YouTube, please install
 pip install youtube-dl
 ```
 
+Youtube-dl is slow recently, you may use [yt-dlp](https://github.com/yt-dlp/yt-dlp) as instead.
+
+
 ### Download Dataset Scripts
 We provide scripts for download WebVid, CC3M and YT-Temporal in
 [Google Driver](https://drive.google.com/drive/folders/12uizpMbjX1Uw7XA5asBy6xbHC-RAVrmd?usp=sharing).
 
 
 
-### WebVid
+### WebVid [5T]
 Download results_2M_train.csv and results_2M_val.csv from [webvid](https://github.com/m-bain/webvid), and then use provided scripts to download webvid.
 
-### HowTo100M
+### HowTo100M [~20T]
 Download source video from [howto100m](https://www.di.ens.fr/willow/research/howto100m/).
 
-### YT-Temporal 180M
+### YT-Temporal 180M [60T]
 
 Please email to [rowanz](https://github.com/rowanz/merlot/tree/main/data) to access this dataset and then download with our provided scripts.
 
@@ -44,26 +47,43 @@ Please follow [merlot](https://github.com/rowanz/merlot/blob/main/data/process.p
 ## 3. Download Finetune Dataset
 
 
-### TGIF-QA
+### TGIF-QA [134G]
+Download raw frames from [Google Driver](https://drive.google.com/file/d/11wdvsTYIPcSTRMVry1tufILiNE4aAMp5/view?usp=sharing).
 
-### MSRVTT
+### MSRVTT [<10G]
 
-### MSVD
+```bash
+wget https://www.robots.ox.ac.uk/~maxbain/frozen-in-time/data/MSRVTT.zip -P data; unzip data/MSRVTT.zip
+```
+Please refer to [Frozen](https://github.com/m-bain/frozen-in-time) for more details if you have difficult in downloading this dataset.
 
-### K400
+### MSVD [1.86G]
 
-### HMDB51
+```bash
+wget -c https://www.cs.utexas.edu/users/ml/clamp/videoDescription/YouTubeClips.tar
+```
+Please refer to [MSVD](https://www.cs.utexas.edu/users/ml/clamp/videoDescription/) for more details if you have difficult in downloading this dataset.
 
-### Ego4d
+### K400 [260G]
+Download csv file from [here](https://deepmind.com/research/open-source/kinetics).
+Then download source video the same as Webvid.
+
+### HMDB51 [<10G]
+
+Download source video from [here](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/).
+
+### Ego4d [900G]
 
 ### LSMDC
 
-### ActivityNet
+### ActivityNet [200G]
+
+Download source video from [google driver](https://drive.google.com/file/d/12YOTnPc4zCwum_R9CSpZAI9ppAei8KMG/view?usp=sharing).
 
 ### DiDeMo
 
 
-## Soft Link and Meta Data
+## 4. Soft Link and Meta Data
 
 After downloading all these datasets, please prepare these datasets as follow:
 
@@ -80,7 +100,7 @@ As shown in below:
 ```bash
 mkdir metadata
 ```
-Place all annotation file in metadata, as shown in below:
+Place all annotation file download from google driver in metadata, as shown in below:
 
 ![Datasets](figures/metadata.png)
 
