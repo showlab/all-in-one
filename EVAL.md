@@ -31,6 +31,7 @@ As below:
 ![](figures/tensorboard_ft_example.png)
 
 
+Notice msrvtt_vqa is a loss name which is equal to open-set VQA in the final code.
 
 #### TGIF-QA Action/Transition
 
@@ -155,7 +156,11 @@ load_path="pretrained/all-in-one-base.ckpt"
 | 36.5 | 36.5 |
 
 
-## 4. Retrieval
+## 4. Fast Retrieval
+
+To speed up retrieval efficiency, we get ride of one-to-one matching in one-stream network.
+
+The retrieval time cut down from 26H -> 1H on MSRVTT with our implementation, and only slightly drop in performance.
 
 ### MSRVTT
 #### VTC only
