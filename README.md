@@ -76,5 +76,13 @@ If you find our work helps, please cite our paper.
 }
 ```
 
+## Contact
+
+Email: _awinyimgprocess at gmail dot com_
+
+If you have any problem or have difficult in reproducing the results reported in this code, you can email to me or open a question in issues.
+We are also willing to merge the code if transfer our All-in-one to different tasks or datasets.
+
+
 ## Acknowledgement
 This work is mainly based on [ViLT](https://github.com/dandelin/ViLT), [Frozen](https://github.com/m-bain/frozen-in-time) and [Merlot](https://github.com/rowanz/merlot).

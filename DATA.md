@@ -1,3 +1,6 @@
+> Since we spend more than a half of time on Data Preprocessing, we provide our experience in processing data and hope it helps.
+
+
 # Dataset Preparation
 We utilize three datasets for pretrain: WebVid2.5M, HowTo100M, YT-Temporal180M.
 
@@ -12,8 +15,12 @@ Please download these datasets by yourself with following instructions:
 For simple, we arrange the annotation file from 15 datasets. Include:
 activitynet, cc3m, didemo, ego4d, hmdb51, howto100m, k400, lsmdc, msrvtt, msvd, tgif, tvqa, vcr1annots, webvid, yttemporal.
 
+Please download annotation files arranged by us from [Google Driver](https://drive.google.com/drive/folders/1nXdcVzvA8CoeShk6PhzM8bd0uzCfARXI?usp=sharing).
 
-Please download annotation files arranged by us from [google driver](https://drive.google.com/drive/folders/1nXdcVzvA8CoeShk6PhzM8bd0uzCfARXI?usp=sharing).
+
+### Download Data Preprocess Scripts (Optional)
+For easier data processing, we also provide some scripts to process common datasets or annotations.
+Download from [Google Driver](https://drive.google.com/drive/folders/1AuAONoGrUs-ltvc3JXXzu6qv7yOdImRX?usp=sharing).
 
 ## 2. Download Pretrain Dataset
 All these datasets contain video mainly from YouTube, please install
