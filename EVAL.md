@@ -60,7 +60,7 @@ load_path="pretrained/all-in-one-base.ckpt"
 
 |  Accuracy   | Report in Paper  | Trained Log |
 |  ----  | ----  | --- |
-| 45.5  | 46.1 | [anonymous](anonymous) |
+| 46.1  | 46.5 | [anonymous](anonymous) |
 
 
 ## 2. Action Recognition (Linear Evaluation)

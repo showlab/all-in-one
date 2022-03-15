@@ -47,16 +47,18 @@ mkdir pretrained
 cp *.ckpt pretrained/
 ```
 
-
 ## Dataset Preparation
 See [`DATA.md`](DATA.md)
 
-## Train New Models
+## Pre-training
 See [`TRAIN.md`](TRAIN.md)
 
-## Evaluation
+## Evaluation on Downstream Tasks
 See [`EVAL.md`](EVAL.md)
 
+By unified design and sparse sampling, AllInOne show much small flops.
+
+![](figures/introduction_new.jpg)
 
 ## News
 ### 2022.3.14 The first version of AllInOne is released. The data.md is in progress.

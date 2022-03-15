@@ -45,6 +45,12 @@ num_frames=3 \
 task_mlm_itm_webvid_howto whole_word_masking=True step200k per_gpu_batchsize=16
 ```
 
+We release  a tensorboard train logs for reference here [tensorboard online](https://tensorboard.dev/experiment/0DCg4Ph9S5SmyMHpK6erOQ/#scalars).
+The capture shown as below:
+
+![](figures/tensorboard_example.png)
+
+
 ### Webvid+HowTo [All-in-one-tiny]
 
 ```bash
