@@ -45,7 +45,7 @@ num_frames=3 \
 task_mlm_itm_webvid_howto whole_word_masking=True step200k per_gpu_batchsize=16
 ```
 
-We release  a tensorboard train logs for reference here [tensorboard online](https://tensorboard.dev/experiment/0DCg4Ph9S5SmyMHpK6erOQ/#scalars).
+We release  a tensorboard train logs for reference here [tensorboard online](https://tensorboard.dev/experiment/b1hYv3YoSQmwG1nYtVIayA/#scalars).
 The capture shown as below:
 
 ![](figures/tensorboard_example.png)
@@ -58,6 +58,7 @@ python move_pretrained_weight.py
 
 python run.py with data_root=DataSet \
 num_gpus=8 num_nodes=16 \
+per_gpu_batchsize=32 \
 task_mlm_itm_webvid_howto whole_word_masking=True \
 vit="vit_deit_tiny_patch16_224" image_size=224 patch_size=16 \
 hidden_size=192 num_heads=3 num_layers=12

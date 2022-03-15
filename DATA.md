@@ -75,6 +75,7 @@ Download source video from [here](https://serre-lab.clps.brown.edu/resource/hmdb
 ### Ego4d [900G]
 
 ### LSMDC
+Download source video from [Website](https://sites.google.com/site/describingmovies/).
 
 ### ActivityNet [200G]
 
@@ -82,6 +83,7 @@ Download source video from [google driver](https://drive.google.com/file/d/12YOT
 
 ### DiDeMo
 
+Please refer to [clipbert](https://github.com/jayleicn/ClipBERT/blob/main/scripts/download_didemo.sh) for details.
 
 ## 4. Soft Link and Meta Data
 

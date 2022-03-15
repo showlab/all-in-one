@@ -76,7 +76,7 @@ load_path="pretrained/all-in-one-base.ckpt"
 
 |Accuracy|Report in Paper| Trained Log |
 | ---- |---- | --- |
-| 52.3  | 50.8 | [anonymous](anonymous) |
+| 52.3  | 50.8 | [Google Driver](https://drive.google.com/file/d/1ZGxod59se13dZwD7wSIGOAVywV3zXEA3/view?usp=sharing) |
 
 ### HMDB51
 ```bash
@@ -90,7 +90,7 @@ load_path="pretrained/all-in-one-base.ckpt"
 
 |  Accuracy   | Report in Paper  | Trained Log |
 |  ----  | ----  | --- |
-| 51.2 | 50.8 | [anonymous](anonymous) |
+| 51.2 | 50.8 | [Google Driver](https://drive.google.com/file/d/1PSnc6CHZS16JWnpNRdRbfeuFEejEBRP6/view?usp=sharing) |
 
 
 ## 3. Zero-shot Multiple-choice
