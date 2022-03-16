@@ -14,23 +14,36 @@ Install pytorch and PytorchLighting first.
 ```bash
 conda create -n allinone python=3.7
 source activate allinone
-conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 cd [Path_To_This_Code]
 pip install -r requirements.txt
 ```
 
-### 2. On-the-fly decode
+If all packages include ffmpeg installed, please skip step 2.
+
+### 2. On-the-fly decode (may skip)
 To speed up the pre-training, we adopt on-the-fly decode for fast IO.
-Install ffmpeg and pytorchvideo (for data augmentation) as below.
+Install ffmpeg as below.
 
-
+#### 1. ffmpeg
 ```bash
 sudo conda install -y ffmpeg
+```
+
+Please install the required packages if not included in the requirements.txt.
+
+If you server cannot connect to http or install ffmpeg slowly. Please download static binary file from [FFmpeg Static Builds](https://johnvansickle.com/ffmpeg/) and then add to path variable, as follows:
+
+```bash
+export PATH=[PATH_TO_Dir/]ffmpeg-git-20220108-amd64-static:$PATH
+```
+
+#### 2. pytorch video
+Install pytorchvideo (for data augmentation) as below:
+
+```bash
 pip install ffmpeg-python
 pip install pytorchvideo
 ```
-
-Please install the required packages if not included in the requirements.
 
 ## Download Pretrained Weights
 We provide three pretrained weights in google driver.
