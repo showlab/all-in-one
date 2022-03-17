@@ -60,6 +60,15 @@ mkdir pretrained
 cp *.ckpt pretrained/
 ```
 
+### Compare with state-of-the-arts
+
+|Model|Params|Frames|TGIF-Action|TGIF-Frame|MSR R@5|MSR R@10|
+|---|---|---|---|---|---|---|
+|ClipBERT|137M|8 x 2|82.9|59.4|49.2|63.5|
+|VIOLET|198M|16|87.1|-|63.0|73.4|
+|All-in-one-S|33M|3|**91.2**|**64.0**|**61.5**|**70.9**|
+|All-in-one-B|110M|3|**92.9**|**64.2**|**67.0**|**77.1**|
+
 ## Dataset Preparation
 See [`DATA.md`](DATA.md)
 
