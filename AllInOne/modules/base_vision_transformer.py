@@ -595,13 +595,13 @@ class VisionTransformer(nn.Module):
         self.pos_embed = nn.Parameter(torch.zeros(1, num_patches + 1, embed_dim))
         self.pos_drop = nn.Dropout(p=drop_rate)
         # print(img_size, patch_size, self.patch_dim)
-        # # =================== temporal embedding ======================
-        self.num_frames = config['num_frames']
-        print("# frames for module is: {}".format(self.num_frames))
-        self.temporal_embed = nn.Parameter(torch.zeros(1, config['num_frames'], embed_dim))
-        # self.patches_per_frame = 49 # 7x7 for patch with 32 resolution
-        self.patches_per_frame = self.patch_dim ** 2  # 7x7 for patch with 32 resolution
-        # # ===
+        # # # =================== temporal embedding ======================
+        # self.num_frames = config['num_frames']
+        # print("# frames for module is: {}".format(self.num_frames))
+        # self.temporal_embed = nn.Parameter(torch.zeros(1, config['num_frames'], embed_dim))
+        # # self.patches_per_frame = 49 # 7x7 for patch with 32 resolution
+        # self.patches_per_frame = self.patch_dim ** 2  # 7x7 for patch with 32 resolution
+        # # # ===
         if add_norm_before_transformer:
             self.pre_norm = norm_layer(embed_dim)
 
@@ -787,13 +787,13 @@ class VisionTransformer(nn.Module):
         patch_index = patch_index[select[:, 0], select[:, 1]].view(B, -1, 2)
         pos_embed = pos_embed[select[:, 0], select[:, 1]].view(B, -1, C)
         # === : add temporal pos embed here
-        # temporal embed needs to be repeated within each frame (this does [1,2,3] --> [1,1,1,2,2,2,3,3,3]...)
-        tile_temporal_embed = self.temporal_embed.repeat_interleave(self.patches_per_frame, 1)
-        # tile_temporal_embed = tile_temporal_embed.view(-1, self.num_frames, tile_temporal_embed.size(-1))
-        # print(pos_embed.size(), tile_temporal_embed.size())
-        pos_embed = pos_embed.view(pos_embed.size(0)//self.num_frames, -1, pos_embed.size(-1))
-        pos_embed = pos_embed + tile_temporal_embed
-        pos_embed = pos_embed.view(-1, self.patches_per_frame, pos_embed.size(-1))
+        # # temporal embed needs to be repeated within each frame (this does [1,2,3] --> [1,1,1,2,2,2,3,3,3]...)
+        # tile_temporal_embed = self.temporal_embed.repeat_interleave(self.patches_per_frame, 1)
+        # # tile_temporal_embed = tile_temporal_embed.view(-1, self.num_frames, tile_temporal_embed.size(-1))
+        # # print(pos_embed.size(), tile_temporal_embed.size())
+        # pos_embed = pos_embed.view(pos_embed.size(0)//self.num_frames, -1, pos_embed.size(-1))
+        # pos_embed = pos_embed + tile_temporal_embed
+        # pos_embed = pos_embed.view(-1, self.patches_per_frame, pos_embed.size(-1))
         # =======
         if mask_it:
             label = label[select[:, 0], select[:, 1]].view(B, -1, 3)
