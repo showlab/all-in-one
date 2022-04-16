@@ -1,3 +1,16 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/all-in-one-exploring-unified-video-language/visual-question-answering-on-msrvtt-qa-1)](
+https://paperswithcode.com/sota/visual-question-answering-on-msrvtt-qa-1?p=all-in-one-exploring-unified-video-language)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/all-in-one-exploring-unified-video-language/visual-question-answering-on-msvd-qa-1)](
+https://paperswithcode.com/sota/visual-question-answering-on-msvd-qa-1?p=all-in-one-exploring-unified-video-language)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/all-in-one-exploring-unified-video-language/tgif-frame-on-tgif-qa)](
+https://paperswithcode.com/sota/tgif-frame-on-tgif-qa?p=all-in-one-exploring-unified-video-language)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/all-in-one-exploring-unified-video-language/video-retrieval-on-msr-vtt)](
+https://paperswithcode.com/sota/video-retrieval-on-msr-vtt?p=all-in-one-exploring-unified-video-language)
+
+
 # All-in-one
 
 Code for the paper: All in One: Exploring Unified Video-Language Pre-training [Arxiv](https://arxiv.org/abs/2203.07303)
