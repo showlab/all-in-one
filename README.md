@@ -104,7 +104,7 @@ By unified design and sparse sampling, AllInOne show much small flops.
 
 ## News
 ### 2022.3.14 The first version of AllInOne is released. 
-### 2022.5.07 AllInOne+ is released. The main different between AllInOne is the Image and Video Co-train. The result on seven pre-training dataset is in progress.
+### 2022.5.07 AllInOne+ is released. The main different between AllInOne is the Image and Video Co-train. The detail instructions and results on seven pre-training dataset are in progress.
 
 ## Citation
 If you find our work helps, please cite our paper.
