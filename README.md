@@ -7,8 +7,9 @@ https://paperswithcode.com/sota/visual-question-answering-on-msvd-qa-1?p=all-in-
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/all-in-one-exploring-unified-video-language/tgif-frame-on-tgif-qa)](
 https://paperswithcode.com/sota/tgif-frame-on-tgif-qa?p=all-in-one-exploring-unified-video-language)
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/all-in-one-exploring-unified-video-language/video-retrieval-on-msr-vtt)](
-https://paperswithcode.com/sota/video-retrieval-on-msr-vtt?p=all-in-one-exploring-unified-video-language)
+[comment]: <> ([![PWC]&#40;https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/all-in-one-exploring-unified-video-language/video-retrieval-on-msr-vtt&#41;]&#40;)
+
+[comment]: <> (https://paperswithcode.com/sota/video-retrieval-on-msr-vtt?p=all-in-one-exploring-unified-video-language&#41;)
 
 
 # All-in-one
@@ -75,18 +76,24 @@ cp *.ckpt pretrained/
 
 ### Compare with state-of-the-arts
 
-|Model|Params|Frames|TGIF-Action|TGIF-Frame|MSR R@5|MSR R@10|
-|---|---|---|---|---|---|---|
-|ClipBERT|137M|8 x 2|82.9|59.4|49.2|63.5|
-|VIOLET|198M|16|87.1|-|63.0|73.4|
-|All-in-one-S|33M|3|**91.2**|**64.0**|**61.5**|**70.9**|
-|All-in-one-B|110M|3|**92.9**|**64.2**|**67.0**|**77.1**|
+|Model|Param|Data|Frames|TGIF-Action|TGIF-Frame|MSR R@5|MSR R@10|
+|---|---|---|---|---|---|---|---|
+|ClipBERT|137M|Coco+VG|8 x 2|82.9|59.4|49.2|63.5|
+|VIOLET|198M|Webvid+CC3|16|87.1|-|63.0|73.4|
+|All-in-one-S|33M|WebVid+Howto|3|91.2|64.0|61.5|70.9|
+|All-in-one-B|110M|WebVid+Howto|3|**92.9**|**64.2**|**67.0**|**77.1**|
+|All-in-one-B+|110M|Webvid+CC3|3|**95.4**|**67.2**|**71.2**|**80.3**|
+|All-in-one-B+|110M|Webvid+YTT+HowTo+CC3+CC12+Coco+VG|3||||
+
 
 ## Dataset Preparation
 See [`DATA.md`](DATA.md)
 
 ## Pre-training
+### Full Video Pre-training
 See [`TRAIN.md`](TRAIN.md)
+### Co-training with Image Dataset (All-in-one+)
+See [`COTRAIN.md`](COTRAIN.md)
 
 ## Evaluation on Downstream Tasks
 See [`EVAL.md`](EVAL.md)
@@ -96,8 +103,8 @@ By unified design and sparse sampling, AllInOne show much small flops.
 ![](figures/introduction_new.jpg)
 
 ## News
-### 2022.3.14 The first version of AllInOne is released. The data.md is in progress.
-
+### 2022.3.14 The first version of AllInOne is released. 
+### 2022.5.07 AllInOne+ is released. The main different between AllInOne is the Image and Video Co-train. The result on seven pre-training dataset is in progress.
 
 ## Citation
 If you find our work helps, please cite our paper.
@@ -121,3 +128,6 @@ We are also willing to merge the code if transfer our All-in-one to different ta
 
 ## Acknowledgement
 This work is mainly based on [ViLT](https://github.com/dandelin/ViLT), [Frozen](https://github.com/m-bain/frozen-in-time) and [Merlot](https://github.com/rowanz/merlot).
+
+## License
+MIT
