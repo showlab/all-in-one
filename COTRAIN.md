@@ -15,7 +15,7 @@ task_mlm_vtm_cotrain whole_word_masking=True step200k per_gpu_batchsize=4 backen
 
 ## All-in-one-B+ [7 Dataset]
 - Video: Webvid, YTTemporal, HowTo100M
-- Image: CC3M
+- Image: CC3M, CC12M, CoCo, VisualGenome
 
 ```bash
 cd CoTraining
