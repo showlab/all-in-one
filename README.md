@@ -19,6 +19,12 @@ Code for the paper: All in One: Exploring Unified Video-Language Pre-training [A
 
 ![ppl](figures/ppl.jpg)
 
+
+## News
+- 2022.3.14 The first version of AllInOne is released. 
+- 2022.5.07 AllInOne+ is released. The main different between AllInOne is the Image and Video Co-train. The detail instructions and results on seven pre-training dataset are in progress.
+
+
 ## Install
 
 ### 1.  PytorchLighting
@@ -67,6 +73,8 @@ We provide three pretrained weights in google driver.
 | All-in-one-Ti | 12M| [Google Driver](https://drive.google.com/file/d/1-mS9U1xRnvumaftjhxJsr_t4WjJ-gp7t/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1j27-i7WsNDtj9k0CSnDC9sThMMjMRF-U/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1DmZ5apWqIuUMRg7igdN2sHM2INrT_UZo/view?usp=sharing)|
 | All-in-one-S |33M| [Google Driver](https://drive.google.com/file/d/1ntyEsFWLG8XQZ9oliYsrRZmhp_OMbQJ-/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/10uJZUMH10D1QD_o2g0WmXfv47xTAV5hJ/view?usp=sharing) |  [Google Driver](https://drive.google.com/file/d/12levE9kXQbWykJHUKqXNQZz32vtOPRLt/view?usp=sharing)|
 | All-in-one-B |110M| [Google Driver](https://drive.google.com/file/d/1z3g891ND6CGCUkVzCXr2647wVG-15uUS/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1FBs6HOeXr3Bo_UZLDq13qscLTMqITGWC/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1D7OiF9HpIIsFk20LkCUWYThpXo_NPzT0/view?usp=sharing) |
+| All-in-one-B+ |110M| [Google Driver](https://drive.google.com/file/d/1t-yWNjXJxGslBkKujlyYh-HUIdCc_gF7/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1EN1D0KjqOze9tDW15raC2AULIEqfd2DQ/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1uxtfWhVmi1BAhHzOzJMXjmwE6H3go2L9/view?usp=sharing) |
+
 
 After downloaded these pretrained weights, move them into pretrained dir.
 ```bash
@@ -102,9 +110,6 @@ By unified design and sparse sampling, AllInOne show much small flops.
 
 ![](figures/introduction_new.jpg)
 
-## News
-### 2022.3.14 The first version of AllInOne is released. 
-### 2022.5.07 AllInOne+ is released. The main different between AllInOne is the Image and Video Co-train. The detail instructions and results on seven pre-training dataset are in progress.
 
 ## Citation
 If you find our work helps, please cite our paper.
