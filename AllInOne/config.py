@@ -639,7 +639,7 @@ def task_finetune_only_ind_itc_msrvtt_randaug():
     train_transform_keys = ["pixelbert_randaug"]
     loss_names = _loss_names({"ind_itc": 1})
     batch_size = 1024
-    max_epoch = 50
+    max_epoch = 200
     max_steps = None
     warmup_steps = 0.1
     retrieval_views = 3  # use 5 views
@@ -658,7 +658,7 @@ def task_finetune_ind_itc_irtr_msrvtt_randaug():
     train_transform_keys = ["pixelbert_randaug"]
     loss_names = _loss_names({"ind_itc": 1, "irtr": 1, "itm": 0.5})  # , "irtr": 1, "itm": 0.5
     batch_size = 1024
-    max_epoch = 50
+    max_epoch = 200
     max_steps = None
     warmup_steps = 0.1
     retrieval_views = 3  # use 5 views
@@ -677,7 +677,7 @@ def task_finetune_ind_itc_irtr_activitynet_randaug():
     train_transform_keys = ["pixelbert_randaug"]
     loss_names = _loss_names({"ind_itc": 1})  # , "irtr": 1, "itm": 0.5
     batch_size = 1024
-    max_epoch = 50
+    max_epoch = 200
     max_steps = None
     warmup_steps = 0.1
     retrieval_views = 3  # use 5 views
@@ -697,7 +697,7 @@ def task_finetune_ind_itc_irtr_didemo_randaug():
     loss_names = _loss_names({"ind_itc": 1})  # , "irtr": 1, "itm": 0.5
     batch_size = 1024
     max_text_len = 80  # perform paragraph to video matching
-    max_epoch = 50
+    max_epoch = 200
     max_steps = None
     warmup_steps = 0.1
     retrieval_views = 3  # use 5 views

@@ -196,6 +196,14 @@ load_path="pretrained/all-in-one-base.ckpt"
 #### VTC AllInOne+
 By co-training with image dataset.
 
+```bash
+python run.py with \
+data_root=DataSet num_gpus=8 num_nodes=1 \
+per_gpu_batchsize=32 task_finetune_only_ind_itc_msrvtt_randaug \
+num_frames=3 \
+load_path="pretrained/all-in-one-baseplus.ckpt"
+```
+
 |  R1/R5/R10  | Trained Log |
 |  ----  | --- |
 | 41.8/68.5/76.7 | [Google Driver](https://drive.google.com/file/d/1IIDGULgtStmlSm9USOAOlf32jEnuBLXY/view?usp=sharing) |

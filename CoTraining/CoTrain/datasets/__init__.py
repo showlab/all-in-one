@@ -31,5 +31,6 @@ from .video.tgif import TGIFDataset
 from .video.tgifqa import TGIFQADataset
 from .video.didemo import DIDEMODataset
 from .video.hmdb51 import HMDB51Dataset
+from .video.ucf101 import UCF101Dataset
 from .video.k400 import K400Dataset
 from .video.activitynet import ActivityNetDataset

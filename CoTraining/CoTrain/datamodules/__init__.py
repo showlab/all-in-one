@@ -30,6 +30,7 @@ from CoTrain.datamodules.video.tgif_datamodule import TGIFDataModule
 from CoTrain.datamodules.video.tgifqa_datamodule import TGIFQADataModule
 from CoTrain.datamodules.video.didemo_datamodule import DIDEMODataModule
 from CoTrain.datamodules.video.hmdb51_datamodule import HMDB51DataModule
+from CoTrain.datamodules.video.ucf101_datamodule import UCF101DataModule
 from CoTrain.datamodules.video.k400_datamodule import K400DataModule
 from CoTrain.datamodules.video.lsmdc_datamodule import LSMDCDataModule
 from CoTrain.datamodules.image.activitynet_datamodule import ActivityNetDataModule
@@ -63,6 +64,7 @@ _datamodules = {
     "tgifqa": TGIFQADataModule,
     'didemo': DIDEMODataModule,
     'hmdb51': HMDB51DataModule,
+    'ucf101': UCF101DataModule,
     'k400': K400DataModule,
     'lsmdc': LSMDCDataModule,
     'activitynet': ActivityNetDataModule
