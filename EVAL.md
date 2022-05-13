@@ -191,3 +191,12 @@ load_path="pretrained/all-in-one-base.ckpt"
 |  R1/R5/R10   | Report in Paper  | Trained Log |
 |  ----  | ----  | --- |
 | 35.4/67.0/77.6 | 37.1/66.7/75.9 | [Google Driver](https://drive.google.com/file/d/1zLqD6VHjw9Ht6K2Bz7941QMXPVUizwVJ/view?usp=sharing) |
+
+
+#### VTC AllInOne+
+By co-training with image dataset.
+
+|  R1/R5/R10  | Trained Log |
+|  ----  | --- |
+| 41.8/68.5/76.7 | [Google Driver](https://drive.google.com/file/d/1IIDGULgtStmlSm9USOAOlf32jEnuBLXY/view?usp=sharing) |
+

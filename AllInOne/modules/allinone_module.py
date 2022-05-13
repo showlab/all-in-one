@@ -133,6 +133,7 @@ class AllinoneTransformerSS(pl.LightningModule):
             if self.text_embeddings.position_embeddings.weight.size() != state_dict['text_embeddings.position_embeddings.weight'].size():
                 state_dict.pop('text_embeddings.position_embeddings.weight', None)
                 state_dict.pop('text_embeddings.position_ids', None)
+            state_dict = self._inflate_positional_embeds(state_dict)
             self.load_state_dict(state_dict, strict=False)
         if self.hparams.config["linear_evaluation"]:
             for name, param in self.named_parameters():
@@ -275,6 +276,7 @@ class AllinoneTransformerSS(pl.LightningModule):
             # new_state_dict = state_dict_data_parallel_fix(state_dict, self.state_dict())
             # new_state_dict = self._inflate_positional_embeds(new_state_dict)
             # self.load_state_dict(new_state_dict, strict=False)
+            state_dict = self._inflate_positional_embeds(state_dict)
             self.load_state_dict(state_dict, strict=False)
         self.temporal_roll_module = TemporalRoll(n_segment=self.num_frames, v=0)
         # # print learnable param

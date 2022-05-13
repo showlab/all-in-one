@@ -89,7 +89,7 @@ cp *.ckpt pretrained/
 |VIOLET|198M|Webvid+CC3|16|87.1|-|63.0|73.4|
 |All-in-one-S|33M|WebVid+Howto|3|91.2|64.0|61.5|70.9|
 |All-in-one-B|110M|WebVid+Howto|3|**92.9**|**64.2**|**67.0**|**77.1**|
-|All-in-one-B+|110M|Webvid+CC3|3|**95.4**|**67.2**|**71.2**|**80.3**|
+|All-in-one-B+|110M|Webvid+CC3|3|**95.4**|**67.2**|**68.1**|**77.3**|
 |All-in-one-B+|110M|Webvid+YTT+HowTo+CC3+CC12+Coco+VG|3||||
 
 
@@ -107,7 +107,7 @@ See [`EVAL.md`](EVAL.md)
 
 By unified design and sparse sampling, AllInOne show much small flops.
 
-![](figures/introduction_new.jpg)
+![](figures/introduction.png)
 
 
 ## Citation
