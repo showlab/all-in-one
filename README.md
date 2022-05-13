@@ -107,7 +107,7 @@ See [`EVAL.md`](EVAL.md)
 
 By unified design and sparse sampling, AllInOne show much small flops.
 
-![](figures/introduction.png)
+![](figures/introduction.jpg)
 
 
 ## Citation
