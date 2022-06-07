@@ -21,7 +21,8 @@ Code for the paper: All in One: Exploring Unified Video-Language Pre-training [A
 
 
 ## News
-- 2022.05.07 AllInOne+ is released. The main different between AllInOne is the Image and Video Co-train. The detail instructions and results on seven pre-training dataset are in progress.
+- 2022.06.07 Release the model AllInOne+ pre-trained on Eight Dataset (YTT+WebVid+HowTo+CC3+CC12+CoCo+VG+SBU). 
+- 2022.05.07 AllInOne+ is released. The main different between AllInOne is the Image and Video Co-train. 
 - 2022.03.14 The first version of AllInOne is released.
 
 ## Install
@@ -67,12 +68,13 @@ pip install pytorchvideo
 ## Download Pretrained Weights
 We provide three pretrained weights in google driver.
 
-|  Model   | Parameter | Pretrained Weight  | Trained Log | Hparams |
-|  ----  |  ---- | ----  | ---- | ---- |
-| All-in-one-Ti | 12M| [Google Driver](https://drive.google.com/file/d/1-mS9U1xRnvumaftjhxJsr_t4WjJ-gp7t/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1j27-i7WsNDtj9k0CSnDC9sThMMjMRF-U/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1DmZ5apWqIuUMRg7igdN2sHM2INrT_UZo/view?usp=sharing)|
-| All-in-one-S |33M| [Google Driver](https://drive.google.com/file/d/1ntyEsFWLG8XQZ9oliYsrRZmhp_OMbQJ-/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/10uJZUMH10D1QD_o2g0WmXfv47xTAV5hJ/view?usp=sharing) |  [Google Driver](https://drive.google.com/file/d/12levE9kXQbWykJHUKqXNQZz32vtOPRLt/view?usp=sharing)|
-| All-in-one-B |110M| [Google Driver](https://drive.google.com/file/d/1z3g891ND6CGCUkVzCXr2647wVG-15uUS/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1FBs6HOeXr3Bo_UZLDq13qscLTMqITGWC/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1D7OiF9HpIIsFk20LkCUWYThpXo_NPzT0/view?usp=sharing) |
-| All-in-one-B+ |110M| [Google Driver](https://drive.google.com/file/d/1t-yWNjXJxGslBkKujlyYh-HUIdCc_gF7/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1EN1D0KjqOze9tDW15raC2AULIEqfd2DQ/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1uxtfWhVmi1BAhHzOzJMXjmwE6H3go2L9/view?usp=sharing) |
+|  Model  | PT Data | Parameter | Pretrained Weight  | Trained Log | Hparams |
+|  ----  |  ----|  ---- | ----  | ---- | ---- |
+| All-in-one-Ti |Webvid+HowTo| 12M| [Google Driver](https://drive.google.com/file/d/1-mS9U1xRnvumaftjhxJsr_t4WjJ-gp7t/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1j27-i7WsNDtj9k0CSnDC9sThMMjMRF-U/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1DmZ5apWqIuUMRg7igdN2sHM2INrT_UZo/view?usp=sharing)|
+| All-in-one-S | Webvid+HowTo|33M| [Google Driver](https://drive.google.com/file/d/1ntyEsFWLG8XQZ9oliYsrRZmhp_OMbQJ-/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/10uJZUMH10D1QD_o2g0WmXfv47xTAV5hJ/view?usp=sharing) |  [Google Driver](https://drive.google.com/file/d/12levE9kXQbWykJHUKqXNQZz32vtOPRLt/view?usp=sharing)|
+| All-in-one-B | Webvid+HowTo|110M| [Google Driver](https://drive.google.com/file/d/1z3g891ND6CGCUkVzCXr2647wVG-15uUS/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1FBs6HOeXr3Bo_UZLDq13qscLTMqITGWC/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1D7OiF9HpIIsFk20LkCUWYThpXo_NPzT0/view?usp=sharing) |
+| All-in-one-B+ | Webvid+HowTo+<br>CC3|110M| [Google Driver](https://drive.google.com/file/d/1t-yWNjXJxGslBkKujlyYh-HUIdCc_gF7/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1EN1D0KjqOze9tDW15raC2AULIEqfd2DQ/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1uxtfWhVmi1BAhHzOzJMXjmwE6H3go2L9/view?usp=sharing) |
+| All-in-one-B+ | Webvid+YTT+HowTo+<br>CC3+CC12+Coco+VG+SBU|110M| [Google Driver](https://drive.google.com/file/d/1Yd2lKppaduqG_RO1gCA6OpAfB0_IXDoX/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1azTwITjlo7YA1pLP42mlJ45K9IV4JSxR/view?usp=sharing) | [Google Driver](https://drive.google.com/file/d/1ddz8wtd0VSnqhu3Dd0MKiHqcNklG3NSv/view?usp=sharing) |
 
 
 After downloaded these pretrained weights, move them into pretrained dir.
@@ -83,16 +85,18 @@ cp *.ckpt pretrained/
 
 ### Compare with state-of-the-arts
 
+
 |Model|Param|Data|Frames|TGIF-Action|TGIF-Frame|MSR R@5|MSR R@10|
 |---|---|---|---|---|---|---|---|
-|ClipBERT|137M|Coco+VG|8 x 2|82.9|59.4|49.2|63.5|
-|VIOLET|198M|Webvid+CC3|16|87.1|-|63.0|73.4|
-|All-in-one-S|33M|WebVid+Howto|3|91.2|64.0|61.5|70.9|
-|All-in-one-B|110M|WebVid+Howto|3|**92.9**|**64.2**|**67.0**|**77.1**|
-|All-in-one-B+|110M|Webvid+CC3|3|**95.4**|**67.2**|**68.1**|**77.3**|
+|ClipBERT|137M|I:Coco+VG|8 x 2|82.9|59.4|49.2|63.5|
+|VIOLET|198M|V:Webvid+<br>I:CC3|16|87.1|-|63.0|73.4|
+|All-in-one-S|33M|V:WebVid+Howto|3|91.2|64.0|61.5|70.9|
+|All-in-one-B|110M|V:WebVid+Howto|3|**92.9**|**64.2**|**67.0**|**77.1**|
+|All-in-one-B+|110M|V:Webvid+<br>I:CC3|3|**95.4**|**67.2**|**68.1**|**77.3**|
+|All-in-one-B+|110M|V:Webvid+YTT+HowTo+<br>I:CC3+CC12+Coco+VG+SBU|3|**96.3**|**68.5**|**70.3**|**79.2**|
 
-[comment]: <> (|All-in-one-B+|110M|Webvid+YTT+HowTo+<br>CC3+CC12+Coco+VG|3||||)
 
+I is short for Image and V is short for Video in this table.
 
 ## Dataset Preparation
 See [`DATA.md`](DATA.md)
