@@ -789,6 +789,7 @@ class VisionTransformer(nn.Module):
         # # === alex: add temporal pos embed here
         # temporal embed needs to be repeated within each frame (this does [1,2,3] --> [1,1,1,2,2,2,3,3,3]...)
         if mode == 'video':
+            self.patches_per_frame = x.size(1)
             tile_temporal_embed = self.temporal_embed.repeat_interleave(self.patches_per_frame, 1)
             # tile_temporal_embed = tile_temporal_embed.view(-1, self.num_frames, tile_temporal_embed.size(-1))
             # print(pos_embed.size(), tile_temporal_embed.size())

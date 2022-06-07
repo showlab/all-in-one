@@ -90,7 +90,8 @@ cp *.ckpt pretrained/
 |All-in-one-S|33M|WebVid+Howto|3|91.2|64.0|61.5|70.9|
 |All-in-one-B|110M|WebVid+Howto|3|**92.9**|**64.2**|**67.0**|**77.1**|
 |All-in-one-B+|110M|Webvid+CC3|3|**95.4**|**67.2**|**68.1**|**77.3**|
-|All-in-one-B+|110M|Webvid+YTT+HowTo+<br>CC3+CC12+Coco+VG|3||||
+
+[comment]: <> (|All-in-one-B+|110M|Webvid+YTT+HowTo+<br>CC3+CC12+Coco+VG|3||||)
 
 
 ## Dataset Preparation

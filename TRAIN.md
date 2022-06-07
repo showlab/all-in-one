@@ -2,6 +2,9 @@
 
 ## Download ViT/DeiT Pretrained Model
 
+```bash
+mkdir pretrained
+```
 If the server cannot connect to https, please download pretrained (DeiT/ViT) weight in advance as follows.
 ```bash
 cd pretrained
