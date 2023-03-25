@@ -21,6 +21,7 @@ Code for the paper: All in One: Exploring Unified Video-Language Pre-training [A
 
 
 ## News
+- 2022.03.25 Update Readme.
 - 2022.06.07 Release the model AllInOne+ pre-trained on Eight Dataset (YTT+WebVid+HowTo+CC3+CC12+CoCo+VG+SBU). 
 - 2022.05.07 AllInOne+ is released. The main different between AllInOne is the Image and Video Co-train. 
 - 2022.03.14 The first version of AllInOne is released.
@@ -122,8 +123,8 @@ If you find our work helps, please cite our paper.
 @article{wang2022allinone,
   title={All in One: Exploring Unified Video-Language Pre-training},
   author={Wang, Alex Jinpeng and Ge, Yixiao and Yan, Rui and Ge Yuying and Lin, Xudong and Cai, Guanyu  and Wu, Jianping and Shan, Ying and Qie, Xiaohu and Shou, Mike Zheng},
-  journal={arXiv preprint arXiv:2203.07303},
-  year={2022}
+  journal={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2023}
 }
 ```
 
